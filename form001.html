@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+
+    <style>
+        /* Seletor geral */
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Meu primeiro formulário</h1>
+    <!-- Todo formulário deve estar entre as tags <form> </form> -->
+     <!-- Para desativar o preenchimento automático dos campos -->
+      <!-- action no form - ação executada após clicar no botão submit -->
+    <form action="cadastro.php" method="post" autocomplete="off">
+        <!-- Com a tag input 
+            text - caixinha
+            name - Mais útil para HTML e PHP
+            id - Mais útil para JS e Label
+            submit - submeter enviar
+            Label - Utilizado para ligar o Nome com o id
+                    no for sempre vou colocar o nome do id.
+        -->
+        <!-- Metodo de envio GET e POST
+            GET - Envia os dados na URL do browser - para dados não sensíveis e até 3000 letras.
+            POST - Envia os dados por baixo, mas no browser e possível ver os dados também, basta seguir os seguintes passos:
+            - F12
+            - Network - Rede;
+            - Clica no botão enviar;
+            - Opção ALL
+            - Opção PayLoad
+            - O POST deve ser utilizado para envio de dados sensíveia, fotos, senhas, cartão de crédito etc
+        -->
+        <p><label for="inome">Nome:</label> <input type="text" name="nome" id="inome"></p> 
+        <p><label for="isobrenome">Sobrenome:</label> <input type="text" name="sobrenome" id="isobrenome"></p>
+        <!-- Para qual linguagem vamos mandar o formulário -->
+        <p><input type="submit" value="Enviar"></p>
+    </form>
+    
+</body>
+</html>
